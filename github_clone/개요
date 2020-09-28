@@ -1,0 +1,55 @@
+googlefonts
+ - https://fonts.google.com/
+
+
+BEM (일반적인 CSS 작명규칙)
+
+A__B
+ A 의 자식인 B ex) body__container :: body안의 container
+A--B
+ A 의 B 상태 ex) btn--danger :: danger 상태의 btn
+-
+ 일반적인 작명
+
+
+Vendor Prefix(브라우저 업체별 접두사)
+chrome  : -webkit-
+IE      : -ms-
+firefox : -moz-
+
+ ex) placeholder
+    => chrome = ::-webkit-input-placeholder
+       ID = ::-ms-input-placeholder
+       firefox = :: -moz-placeholder
+
+
+
+============== 미디어 규칙 ===================================
+
+@media
+ : 다양한 미디어 유형이나 장치에 따라, 서로 다른 스타일 규칙을 적용
+
+@media 미디어타입 and (미디어특성) {
+   CSS코드
+}
+
+@media screen and (max-width: 1200px) {
+   body {
+      color: red;
+   }
+}
+
+ * 미디어타입
+   - all : 모든 미디어 타입. 기본값
+   - screen : 컴퓨터, 타블렛, 스마트폰 등
+   - print : 인쇄전용
+
+ * 미디어 특성
+   - width       : (값) 일떄
+   - max-width   : (값) 이하 일떄
+   - min-width   : (값) 이상 일때
+   - height      : (값) 일떄
+   - max-height  : (값) 이하 일떄
+   - min-height  : (값) 이상 일때
+   - orientation : 뷰포트 방향(portrait: 세로가 가로보다 길때, landscape: 세로가 가로보다 짧을떄)
+   - 기타
